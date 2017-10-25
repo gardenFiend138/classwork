@@ -1,0 +1,102 @@
+/* Define application-wide selectors here!*/
+
+html {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	width: 80%;
+	margin: 0 auto;
+	font-family: 'times new roman';
+	font-size: 12px;
+}
+
+button {
+	background-color: $lightest-gray;
+	border-color: $dark-gray;
+	color: black;
+	font-weight: normal;
+	padding: 7px;
+	border-radius: 3px;
+	transition: none;
+	font-family: arial;
+	text-transform: none;
+	font-size: 12px;
+	text-align: center;
+}
+
+button:hover {
+	background-color: $dark-blue;
+	border-color: $darkest-blue;
+	color: white;
+}
+
+button {
+	padding-left: 10px;
+	margin-left: 10px;
+}
+
+/*
+	Header Rules
+*/
+
+.main-nav {
+	border-bottom: solid 1px $light-gray;
+	height: 50px;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 10px;
+}
+
+.left-nav,
+.right-nav {
+	width: 100%;
+	margin: 10px;
+	padding-right: 10px;
+	display: flex;
+	justify-content: flex-end space-between;
+	align-content: center;
+
+}
+
+.left-nav {
+	height: 15px;
+	margin-bottom: 1px;
+	display: flex;
+	justify-content: flex-start space-between;
+}
+
+ul {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 10px;
+
+}
+
+#sections-sidebar-btn {
+	padding-right: 30px;
+}
+
+#sections-sidebar-btn:hover {
+	padding-right: 30px;
+	background-color: $light-gray;
+
+}
+
+#search-modal-btn:hover {
+	// padding-right: 15px;
+	background-color: $light-gray;
+	border-radius: 8px;
+}
+
+#cog-btn{
+	font-size: 18px;
+	padding: 4px;
+}
+
+li {
+	// display: flex;
+	// justify-content:space-between;
+}
