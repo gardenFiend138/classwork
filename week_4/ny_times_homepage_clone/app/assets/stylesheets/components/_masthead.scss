@@ -9,7 +9,7 @@
 
 .language-nav {
 	position: absolute;
-	top: -15px;
+	top: -14px;
 	left: calc(50% - (177.78px/2));
 	background: white;
 	border: 1px solid $light-gray;
@@ -25,7 +25,7 @@ language-nav li:first-of-type {
 
 .language-nav a {
 	display: flex;
-	margin: 0 5px;
+	// margin: 0 5px;
 	text-transform: uppercase;
 	font-family: $sans-serif;
 	font-size: 10px;
@@ -49,8 +49,8 @@ language-nav li:first-of-type {
 }
 
 .masthead-links li {
-	padding-right: 10px;
-	margin: 0 5px 0 5px;
+	// padding-right: 5px;
+	// margin: 0 5px 0 5px;
 }
 
 .masthead-link-borders li {

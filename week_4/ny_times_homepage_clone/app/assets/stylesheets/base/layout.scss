@@ -8,8 +8,9 @@ html {
 body {
 	width: 80%;
 	margin: 0 auto;
-	font-family: 'times new roman';
-	font-size: 12px;
+	font-family: $sans-serif;
+	font-weight: bold;
+	font-size: 14px;
 }
 
 button {
