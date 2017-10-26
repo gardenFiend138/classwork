@@ -13,10 +13,10 @@ body {
 }
 
 button {
-	background-color: $lightest-gray;
+	background-color: $light-blue;
 	border-color: $dark-gray;
-	color: black;
-	font-weight: normal;
+	color: white;
+	font-weight: bold;
 	padding: 7px;
 	border-radius: 3px;
 	transition: none;
@@ -26,15 +26,28 @@ button {
 	text-align: center;
 }
 
-button:hover {
-	background-color: $dark-blue;
-	border-color: $darkest-blue;
-	color: white;
-}
+// button:hover {
+// 	background-color: $dark-blue;
+// 	border-color: $darkest-blue;
+// 	color: white;
+// }
 
 button {
 	padding-left: 10px;
 	margin-left: 10px;
+}
+
+.blue-button:hover {
+	background-color: $darkest-blue;
+	border-color: $darkest-blue;
+	color: white;
+}
+
+.gray-button:hover {
+	background-color: $light-gray;
+	border-color: $dark-gray;
+	border-radius: 2px;
+	color: black;
 }
 
 /*
@@ -47,7 +60,7 @@ button {
 	background-color: #fff;
 	display: flex;
 	justify-content: space-between;
-	padding-top: 10px;
+	padding-top: 5px;
 }
 
 .left-nav,
@@ -66,22 +79,16 @@ button {
 	margin-bottom: 1px;
 	display: flex;
 	justify-content: flex-start space-between;
+	padding-top: 8px;
 }
 
 ul {
 	display: flex;
 	justify-content: space-between;
-	padding-right: 10px;
-
 }
 
 #sections-sidebar-btn {
-	padding-right: 30px;
-}
-
-#sections-sidebar-btn:hover {
-	padding-right: 30px;
-	background-color: $light-gray;
+	padding-right: 50px;
 
 }
 
@@ -94,9 +101,6 @@ ul {
 #cog-btn{
 	font-size: 18px;
 	padding: 4px;
-}
-
-li {
-	// display: flex;
-	// justify-content:space-between;
+	color: black;
+	background-color: inherit;
 }
