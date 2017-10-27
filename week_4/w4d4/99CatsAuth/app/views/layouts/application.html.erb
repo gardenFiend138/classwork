@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NinetyNineCats</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <header>
+    <!-- <form action="<%#= session_url %>" method="POST">
+      <input type="hidden" name="_method" value="delete">
+      <button>Log Out I Guess...</button>
+    </form> -->
+  <% if current_user %>
+    <%= link_to "logout", {:controller=> "sessions", :action=> "destroy"}, :method => :delete%>
+    <br>
+    <br>
+    Welcome Back, <%= current_user.username  %>, you ole cat freak you !
+  <% end %>
+
+  <% if !current_user %>
+    <%= link_to "login", {:controller=> "sessions", :action=> "new"}, :method => :get%>
+  <% end %>
+
+
+  </header>
+  <body>
+    <%= yield %>
+  </body>
+</html>
