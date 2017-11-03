@@ -2,9 +2,6 @@ class SessionsController < ApplicationController
   #must be lgoged out to start new session
   before_action :require_logged_out, only: [:new, :create]
 
-  #only allow you to destroy seesion e.g. logout when you're logged in
-  # before action :require_logged_in, only: [:destroy]
-
   def new
     render :new
   end

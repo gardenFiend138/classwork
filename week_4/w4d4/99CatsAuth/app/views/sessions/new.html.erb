@@ -1,8 +1,12 @@
+<!-- Doesn't session_url map to the session destroy action? Shouldn't the action instead be 'new_session_url'? AHHHHHHH wait, I should have looked at the method name first; this is in fact a post request, but since post or /session doesn't have a prefix, it is by default the same prefix as the last declared prefix...Okay, that makes sense, since this new session view should be creating a new instance of session for the current user. Roger that. -->
+
 <form action="<%= session_url%>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <h1> What A Surprise...You're Back For More Cats...</h1>
   <h2> Enter Login Info Below</h2>
   <ul>
+
+    <!--This can actually be placed outside of the html I believe, and be included in the shared directory...d'oh, when you look in the shared directory, there's already a partial made for errors, so it only needs to be included! -->
     <% if flash[:errors] %>
     <% flash[:errors].each do |error|  %>
     <li><%= error %></li>

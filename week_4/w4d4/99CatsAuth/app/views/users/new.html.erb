@@ -1,3 +1,6 @@
+<!-- The beauty of a from in rails is that it does so much of
+the work for us; the views really don't contain all that much; notice how the destination for the data that's collected through this form is in the opening form tag,
+and that all we have to do to specifiy where to send the information. The last element in our form can even just be an input with type 'submit' and rails will know to format that as a button; when using a button, we don't even have to specify type or name. -->
 <form action="<%= users_url%>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <h1> Join Our Cat Loving Community</h1>

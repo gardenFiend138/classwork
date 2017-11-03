@@ -36,7 +36,9 @@ class User < ApplicationRecord
 
   def reset_session_token!
     self.session_token = SecureRandom::urlsafe_base64
-    #why not self.save! ?
+    #why not self.save! ?; you could use it, but then would need to rescue
+    # if there was an exception; even as is, this would require some more
+    # logic to account for an unsuccessful save in a production app
     self.save
     self.session_token
   end

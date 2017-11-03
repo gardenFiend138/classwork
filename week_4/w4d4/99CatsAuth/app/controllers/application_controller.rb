@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  # Why does this have to be indicated again? Where is it that we're using
+  # it oustide of here? We use it in cats_controller, and in the application.html.erb
+  # view page; is it required to be passed to helper_method for both applications,
+  # or just the view? 
   helper_method :current_user
 
   def current_user
