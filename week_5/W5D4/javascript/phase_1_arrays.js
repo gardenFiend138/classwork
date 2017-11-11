@@ -2,6 +2,11 @@
 // the original array the unique elements should be in the order in which
 // they first appear should not mutate the original array
 
+// this is creating a function called uniq on array's prototype; this means
+// that this method will be available to any array we use within this file;
+// we set the function to consist of a constant return value uniqArray, which
+// is initialized as an empty array; we then iterate over the array that received
+// this method, calling each element (el); then, we enter the block of code
 Array.prototype.uniq = function() {
   const uniqArray = [];
   this.forEach((el) => {
@@ -20,6 +25,10 @@ console.log(b.uniq());
 // Array#twoSum - returns an array of position pairs where the elements
 // sum to zero
 
+// Same setup as above; we are creating a function called twoSum on the prototype
+// of array, which means this function gets added to the array object (hash-like)
+// we then use two for loops to iterate over the array twice, and carry out
+// the logic
 Array.prototype.twoSum = function() {
   const sumPairs = [];
   for (let startIdx = 0; startIdx < this.length; startIdx++){

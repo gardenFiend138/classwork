@@ -32,6 +32,8 @@ String.prototype.substrings = function() {
   const substrings = [];
   for (let i = 0; i < this.length; i++ ) {
     for (let j = i + 1; j <= this.length; j++ ) {
+      // so rather than saying (this[i]...this[j]), we have to use
+      // slice to ge a portion of the string
       substrings.push(this.slice(i,j));
     }
   }

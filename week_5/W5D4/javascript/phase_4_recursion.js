@@ -55,3 +55,17 @@ function linearExponent(base, n) {
 // exp(b, 1) = b
 // exp(b, n) = exp(b, n / 2) ** 2             [for even n]
 // exp(b, n) = b * (exp(b, (n - 1) / 2) ** 2) [for odd n]
+
+// is this actually done in O(log n) time? I think that's how David
+// described logs to me...
+function logExponenet(base, n) {
+  if (n === 0) {
+    return 1;
+  }
+
+  if (n % 2 === 0) {
+    return base * (logExponent(base, n / 2)) ** 2;
+  } else {
+    return base * (logExponenet(base, (n - 1) / 2) ** 2);
+  }
+}

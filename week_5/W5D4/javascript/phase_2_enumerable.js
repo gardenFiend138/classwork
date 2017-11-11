@@ -2,6 +2,14 @@
 // callback for each element in the array
 // Note that JavaScript's forEach function has no return value (returns undefined)
 
+
+//Here's where things start to ge tricky for me...using callbacks;
+// so again, we are creating a method called myEach on the prototype of Array,
+// and this function is defined as accepting a callback as an argument;
+// we iterate through 'this' (self--the object receiving the function),
+// and for each each element, we pass the element as the argument for the
+// callback
+
 Array.prototype.myEach = function(callback) {
   for (let i = 0; i < this.length; i++) {
     callback(this[i]);
@@ -41,6 +49,8 @@ Array.prototype.myReduce = function(callback, initialValue) {
   if (this === []) return;
   // set initial accumulator
   // let accumulator = (initialValue) ? initialValue : this[0];
+  // forgot that 0 is falsey, so we had to account for 0 being passed
+  // in as the initialValue
   if (initialValue === undefined) {
     return this.slice(1).myReduce(callback, this[0]);
   }
